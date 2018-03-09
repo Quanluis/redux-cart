@@ -4,7 +4,8 @@ import Product from './Product';
 
 
 const productList = props => {
-    const ProductItems = props.products.map((product, index) => <Product {...product} key={index} />);
+    const ProductItems = props.products.map((product, index) => <Product {...product} key={index}
+    position = {index} />);
                  
     return (
         <ul>

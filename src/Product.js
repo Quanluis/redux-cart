@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux';
+
 
 const Product = props => {
     return(
@@ -6,10 +8,15 @@ const Product = props => {
              <img src={props.imgSrc} alt={props.name}/>
              <p>{props.name}</p>
              <p>{props.price}</p>
-             <button onClick = {() => console.log('plus')} >+</button>
+             <button onClick = {() => props.dispatch({type: "ADD_ITEM", payload: {value: props.position}})} >+</button>
              <p>{props.count}</p>
-             <button onClick = {() => console.log('minus')}>-</button>
+             <button onClick = {() => props.dispatch({type: "REMOVE_ITEM", payload: {value: props.position}})}>-</button>
          </li>
     );
 }
-export default Product; 
+
+const mapStateToProps = null;
+
+const mapDispatchToProps = null;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Product); 
