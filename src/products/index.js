@@ -20,7 +20,7 @@ const initialState = [
     }
 ];
 
-const reducer = (state={initialState}, action) => {
+const reducer = (state= initialState, action) => {
     console.log('product stuff')
     return state;
 
