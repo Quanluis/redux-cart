@@ -2,8 +2,6 @@ import * as types from './types';
 import *  as searchActions from './actions';
 const initialState = '';
 
-
-
 const reducer = (state=initialState, action) => {
 switch(action.type){
 case types.UPDATE_SEARCH: {
