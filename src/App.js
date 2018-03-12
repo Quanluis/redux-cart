@@ -7,10 +7,11 @@ import SearchBar from './SearchBar';
 
 class App extends Component {
   render() {
+   
     return (
       <div>
         <SearchBar />
-        <ProductList products = {this.props.products}/>
+        <ProductList searchTerm = {this.props.search} products = {this.props.products}/>
       </div>
     );
   }
