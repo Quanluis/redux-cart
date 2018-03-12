@@ -4,9 +4,12 @@ import Product from './Product';
 
 
 const productList = props => {
-    const products = Object.keys(props.products).map(key => props.products[key])
-    const ProductItems = products.map((product, index) => <Product {...product} key={index}
-    position = {index} />);
+
+    const ProductItems = Object.keys(props.products).map(id => {
+        return(
+            <Product {...props.products[id]} key={id} id={id} />
+        )
+    });
                  
     return (
         <ul>
